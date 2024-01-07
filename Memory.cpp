@@ -1,0 +1,21 @@
+#include "Memory.hpp"
+
+const HMODULE Memory::GetBaseModuleHandle(const std::string& moduleName)
+{
+	const HMODULE moduleHandle = GetModuleHandleA(moduleName.c_str());
+
+	if (!moduleHandle) {
+		Logger::Error("Failed to get module handle for module '" + moduleName + "'.");
+		throw std::runtime_error("Failed to get module handle for module '" + moduleName + "'.");
+	}
+
+	return moduleHandle;
+}
+
+uint8_t* Memory::ResolveRelativeAddress(uint8_t* address, uint32_t rvaOffset, uint32_t ripOffset)
+{
+	uint32_t rvaAddress = *reinterpret_cast<uint32_t*>(address + rvaOffset);
+	uint64_t ripAddress = reinterpret_cast<uint64_t>(address) + ripOffset;
+
+	return reinterpret_cast<uint8_t*>(rvaAddress + ripAddress);
+}

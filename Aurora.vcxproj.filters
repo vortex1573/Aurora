@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="Logger.cpp">
+      <Filter>Core\Utilities\Logging</Filter>
+    </ClCompile>
+    <ClCompile Include="Instance.cpp">
+      <Filter>Core\Utilities\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="Hooks.cpp">
+      <Filter>Core\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="hde32.c">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="hde64.c">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClCompile>
+    <ClCompile Include="buffer.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="hook.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="trampoline.c">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory.cpp">
+      <Filter>Core\Utilities\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Interfaces.cpp">
+      <Filter>Core\Utilities\Interfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_tables.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_widgets.cpp">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_dx11.cpp">
+      <Filter>Dependencies\ImGui\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_win32.cpp">
+      <Filter>Dependencies\ImGui\Implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="CHook.cpp">
+      <Filter>Core\Hooks\CHook</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{5bce6cc4-852b-4419-abde-1e32b909f7a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{4e54924c-02ea-40a4-86db-bbc519257519}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks">
+      <UniqueIdentifier>{f3c851e0-3c24-4fb2-8ee7-83c4f7eacaca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities">
+      <UniqueIdentifier>{7a692b82-33bb-4382-87b1-75df730a6a3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\Instance">
+      <UniqueIdentifier>{6fe6340a-dcec-4908-84b7-bbab3d5e9e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\Memory">
+      <UniqueIdentifier>{1ad1bbee-d1db-4c4e-9c19-382d7ca2b5bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\Logging">
+      <UniqueIdentifier>{42809d32-6f83-4b92-a84c-2e6eb492e05f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{ee9d8785-e6d3-4716-9005-8a6cab35ffd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Menu">
+      <UniqueIdentifier>{eec25dca-1462-4bfe-b7f6-2812c4c9b83b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Features">
+      <UniqueIdentifier>{3855580d-510d-48c2-aeb9-0d8c7ae62eaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\MinHook">
+      <UniqueIdentifier>{bbcb6d6b-4cbc-4fb3-88a5-6693a1dc0b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\MinHook\hde">
+      <UniqueIdentifier>{721e79e5-c11d-455b-a99c-7a9baa11eb65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\ImGui">
+      <UniqueIdentifier>{c4678df8-44e5-4e91-8e4f-072208249c17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\Interfaces">
+      <UniqueIdentifier>{a3a675ae-951c-484e-9fd5-058938417651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Classes">
+      <UniqueIdentifier>{bc72e21b-090c-45c2-afad-ed2b8b859f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Classes\Interfaces">
+      <UniqueIdentifier>{5a90072c-6dae-4977-99cc-0391fced51a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\ImGui\Implementation">
+      <UniqueIdentifier>{422af993-92e5-4952-8802-afddfc63cd91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\ImGui\Imstb">
+      <UniqueIdentifier>{7b52d19a-7057-457d-8272-a3f835042d60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\CHook">
+      <UniqueIdentifier>{98a7a901-b6fc-4063-8eba-2da3bc3a75f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\Hooks">
+      <UniqueIdentifier>{9133039c-b6c9-4c0b-8509-9a34f6708d1f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Logger.hpp">
+      <Filter>Core\Utilities\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="Instance.hpp">
+      <Filter>Core\Utilities\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.hpp">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="Hooks.hpp">
+      <Filter>Core\Hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="hde32.h">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="hde64.h">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="pstdint.h">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="table32.h">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="table64.h">
+      <Filter>Dependencies\MinHook\hde</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="MinHook.h">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="trampoline.h">
+      <Filter>Dependencies\MinHook</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory.hpp">
+      <Filter>Core\Utilities\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="Interfaces.hpp">
+      <Filter>Core\Utilities\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="imconfig.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_internal.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_dx11.h">
+      <Filter>Dependencies\ImGui\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui_impl_win32.h">
+      <Filter>Dependencies\ImGui\Implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui.h">
+      <Filter>Dependencies\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.hpp">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_rectpack.h">
+      <Filter>Dependencies\ImGui\Imstb</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_textedit.h">
+      <Filter>Dependencies\ImGui\Imstb</Filter>
+    </ClInclude>
+    <ClInclude Include="imstb_truetype.h">
+      <Filter>Dependencies\ImGui\Imstb</Filter>
+    </ClInclude>
+    <ClInclude Include="FNVHash.hpp">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
+    <ClInclude Include="CHook.hpp">
+      <Filter>Core\Hooks\CHook</Filter>
+    </ClInclude>
+    <ClInclude Include="IEngineClient.hpp">
+      <Filter>SDK\Classes\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CInterfaceRegistry.hpp">
+      <Filter>SDK\Classes\Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
