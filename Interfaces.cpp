@@ -4,7 +4,7 @@ void Interfaces::Initialize()
 {
 	Logger::Info("Initializing interfaces.");
 
-	Engine = reinterpret_cast<IEngineClient*>(GetInterface("engine2.dll", "Source2EngineToClient001"));
+	Engine = reinterpret_cast<CEngineClient*>(GetInterface("engine2.dll", "Source2EngineToClient001"));
 }
 
 CInterfaceRegistry* Interfaces::GetInterfaceRegistry(const std::string& moduleName, uint8_t* createInterface)

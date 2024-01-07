@@ -2,7 +2,7 @@
 
 #include "Memory.hpp"
 
-class IEngineClient {
+class CEngineClient {
 public:
 	bool IsInGame()
 	{
