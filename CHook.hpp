@@ -6,12 +6,11 @@
 #include "Logger.hpp"
 
 class CHook {
-private:
-	void* Original;
-
 public:
 	std::string HookName;
+
 	void* Target;
+	void* Original;
 
 	CHook(const char* moduleName, const char* name) : HookName(std::format("{0}->{1}", moduleName, name)) {}
 
