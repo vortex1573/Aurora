@@ -49,4 +49,6 @@ void Hooks::Shutdown()
 void Hooks::InstallHooks()
 {
 	Logger::Debug("Installing hooks.");
+
+	CreateMove::Hook();
 }

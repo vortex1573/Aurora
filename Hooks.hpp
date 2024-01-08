@@ -1,8 +1,9 @@
 #pragma once
 
-#include "CHook.hpp"
 #include "MinHook.h"
 #include "Logger.hpp"
+
+#include "CreateMove.hpp"
 
 namespace Hooks {
 	static bool Initialized = false;

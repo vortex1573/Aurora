@@ -213,7 +213,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="buffer.c" />
-    <ClCompile Include="CHook.cpp" />
+    <ClCompile Include="CreateMove.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="hde32.c" />
     <ClCompile Include="hde64.c" />
@@ -233,13 +233,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
-    <ClInclude Include="CHook.hpp" />
+    <ClInclude Include="CHookObject.hpp" />
     <ClInclude Include="Color.hpp" />
+    <ClInclude Include="CreateMove.hpp" />
     <ClInclude Include="FNVHash.hpp" />
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />
     <ClInclude Include="Hooks.hpp" />
-    <ClInclude Include="IEngineClient.hpp" />
+    <ClInclude Include="CEngineClient.hpp" />
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_impl_dx11.h" />

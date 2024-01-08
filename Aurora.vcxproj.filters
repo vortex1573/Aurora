@@ -50,8 +50,8 @@
     <ClCompile Include="imgui_impl_win32.cpp">
       <Filter>Dependencies\ImGui\Implementation</Filter>
     </ClCompile>
-    <ClCompile Include="CHook.cpp">
-      <Filter>Core\Hooks\CHook</Filter>
+    <ClCompile Include="CreateMove.cpp">
+      <Filter>Core\Hooks\Hooks\CreateMove</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -100,20 +100,26 @@
     <Filter Include="SDK\Classes">
       <UniqueIdentifier>{bc72e21b-090c-45c2-afad-ed2b8b859f72}</UniqueIdentifier>
     </Filter>
-    <Filter Include="SDK\Classes\Interfaces">
-      <UniqueIdentifier>{5a90072c-6dae-4977-99cc-0391fced51a5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Dependencies\ImGui\Implementation">
       <UniqueIdentifier>{422af993-92e5-4952-8802-afddfc63cd91}</UniqueIdentifier>
     </Filter>
     <Filter Include="Dependencies\ImGui\Imstb">
       <UniqueIdentifier>{7b52d19a-7057-457d-8272-a3f835042d60}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Core\Hooks\CHook">
-      <UniqueIdentifier>{98a7a901-b6fc-4063-8eba-2da3bc3a75f3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Core\Hooks\Hooks">
       <UniqueIdentifier>{9133039c-b6c9-4c0b-8509-9a34f6708d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Interfaces">
+      <UniqueIdentifier>{5a90072c-6dae-4977-99cc-0391fced51a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Structs">
+      <UniqueIdentifier>{23d3ca91-699e-4509-8498-6eba0dde4f5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\Classes">
+      <UniqueIdentifier>{0faf171b-833d-4386-a7f1-f99560e5b766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\Hooks\CreateMove">
+      <UniqueIdentifier>{5345f320-ea47-4299-bdbd-6891bb8aab4e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -192,14 +198,17 @@
     <ClInclude Include="FNVHash.hpp">
       <Filter>Dependencies</Filter>
     </ClInclude>
-    <ClInclude Include="CHook.hpp">
-      <Filter>Core\Hooks\CHook</Filter>
-    </ClInclude>
-    <ClInclude Include="IEngineClient.hpp">
-      <Filter>SDK\Classes\Interfaces</Filter>
+    <ClInclude Include="CEngineClient.hpp">
+      <Filter>SDK\Interfaces</Filter>
     </ClInclude>
     <ClInclude Include="CInterfaceRegistry.hpp">
-      <Filter>SDK\Classes\Interfaces</Filter>
+      <Filter>SDK\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CHookObject.hpp">
+      <Filter>Core\Hooks\Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateMove.hpp">
+      <Filter>Core\Hooks\Hooks\CreateMove</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
