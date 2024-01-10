@@ -7,7 +7,7 @@ void Interfaces::Initialize()
 	Engine = reinterpret_cast<CEngineClient*>(GetInterface("engine2.dll", "Source2EngineToClient001"));
 }
 
-CInterfaceRegistry* Interfaces::GetInterfaceRegistry(const std::string& moduleName, uint8_t* createInterface)
+CInterfaceRegistry* Interfaces::GetInterfaceRegistry(const std::string& moduleName, uintptr_t* createInterface)
 {
 	CInterfaceRegistry* interfaceRegistry = *reinterpret_cast<CInterfaceRegistry**>(Memory::ResolveRelativeAddress(createInterface, 0x3, 0x7));
 
@@ -23,7 +23,7 @@ uintptr_t* Interfaces::GetInterface(const std::string& moduleName, const std::st
 {
 	uintptr_t* ret = nullptr;
 	const HMODULE moduleHandle = Memory::GetBaseModuleHandle(moduleName);
-	uint8_t* createInterface = reinterpret_cast<uint8_t*>(GetProcAddress(moduleHandle, "CreateInterface"));
+	uintptr_t* createInterface = reinterpret_cast<uintptr_t*>(GetProcAddress(moduleHandle, "CreateInterface"));
 
 	if (!createInterface) {
 		Logger::Error("Failed to get 'CreateInterface' for module '" + moduleName + "'.");

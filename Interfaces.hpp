@@ -16,6 +16,6 @@ namespace Interfaces {
 	inline CEngineClient* Engine = nullptr;
 
 	void Initialize();
-	CInterfaceRegistry* GetInterfaceRegistry(const std::string& moduleName, uint8_t* createInterface);
+	CInterfaceRegistry* GetInterfaceRegistry(const std::string& moduleName, uintptr_t* createInterface);
 	uintptr_t* GetInterface(const std::string& moduleName, const std::string& interfaceName);
 }
