@@ -12,7 +12,8 @@ const HMODULE Memory::GetBaseModuleHandle(const std::string& moduleName)
 	return moduleHandle;
 }
 
-uintptr_t* Memory::GetAbsoluteAddress(uintptr_t* address, int preOffset, int postOffset)
+template <typename T = uintptr_t>
+T* Memory::GetAbsoluteAddress(T* address, int preOffset, int postOffset)
 {
 	address += preOffset;
 	address += sizeof(int32_t) + *reinterpret_cast<int32_t*>(address);

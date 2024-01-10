@@ -10,7 +10,8 @@
 namespace Memory {
 	const HMODULE GetBaseModuleHandle(const std::string& moduleName);
 
-	uintptr_t* GetAbsoluteAddress(uintptr_t* address, int preOffset, int postOffset);
+	template <typename T = uintptr_t>
+	T* GetAbsoluteAddress(T* address, int preOffset, int postOffset);
 	uintptr_t* ResolveRelativeAddress(uintptr_t* address, uint32_t rvaOffset, uint32_t ripOffset);
 
 	template <typename T>
@@ -19,7 +20,7 @@ namespace Memory {
 		return (*reinterpret_cast<T**>(instance))[index];
 	}
 
-	template <std::size_t Index, typename ReturnType = void, typename... Args>
+	template <size_t Index, typename ReturnType = void, typename... Args>
 	__forceinline ReturnType CallVirtual(void* instance, Args&&... args)
 	{
 		using fn = ReturnType(__thiscall*)(void*, decltype(args)...);
