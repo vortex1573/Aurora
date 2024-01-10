@@ -12,7 +12,7 @@ namespace Memory {
 
 	template <typename T>
 	T* GetAbsoluteAddress(T* address, int preOffset, int postOffset);
-	uintptr_t* ResolveRelativeAddress(uintptr_t* address, uint32_t rvaOffset, uint32_t ripOffset);
+	uint8_t* ResolveRelativeAddress(uint8_t* address, uint32_t rvaOffset, uint32_t ripOffset);
 
 	template <typename T>
 	__forceinline T GetVirtual(void* instance, std::size_t index)

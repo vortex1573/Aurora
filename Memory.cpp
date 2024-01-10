@@ -21,10 +21,10 @@ T* Memory::GetAbsoluteAddress(T* address, int preOffset, int postOffset)
 	return address;
 }
 
-uintptr_t* Memory::ResolveRelativeAddress(uintptr_t* address, uint32_t rvaOffset, uint32_t ripOffset)
+uint8_t* Memory::ResolveRelativeAddress(uint8_t* address, uint32_t rvaOffset, uint32_t ripOffset)
 {
-	uintptr_t rvaAddress = *reinterpret_cast<uint32_t*>(address + rvaOffset);
-	uintptr_t ripAddress = reinterpret_cast<uint64_t>(address) + ripOffset;
+	uint32_t rvaAddress = *reinterpret_cast<uint32_t*>(address + rvaOffset);
+	uint64_t ripAddress = reinterpret_cast<uint64_t>(address) + ripOffset;
 
-	return reinterpret_cast<uintptr_t*>(rvaAddress + ripAddress);
+	return reinterpret_cast<uint8_t*>(rvaAddress + ripAddress);
 }
