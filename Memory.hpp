@@ -15,15 +15,15 @@ namespace Memory {
 	uint8_t* ResolveRelativeAddress(uint8_t* address, uint32_t rvaOffset, uint32_t ripOffset);
 
 	template <typename T>
-	__forceinline T GetVirtual(void* instance, std::size_t index)
+	__forceinline T GetVirtual(void* instance, size_t index)
 	{
 		return (*reinterpret_cast<T**>(instance))[index];
 	}
 
-	template <size_t Index, typename ReturnType = void, typename... Args>
-	__forceinline ReturnType CallVirtual(void* instance, Args&&... args)
+	template <typename ReturnType = void*, typename... Args>
+	__forceinline ReturnType CallVirtual(void* instance, size_t index, Args... args)
 	{
 		using fn = ReturnType(__thiscall*)(void*, decltype(args)...);
-		return GetVirtual<fn>(instance, Index)(instance, args...);
+		return GetVirtual<fn>(instance, index)(instance, args...);
 	}
 }
