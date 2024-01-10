@@ -10,7 +10,7 @@
 namespace Memory {
 	const HMODULE GetBaseModuleHandle(const std::string& moduleName);
 
-	template <typename T = uintptr_t>
+	template <typename T>
 	T* GetAbsoluteAddress(T* address, int preOffset, int postOffset);
 	uintptr_t* ResolveRelativeAddress(uintptr_t* address, uint32_t rvaOffset, uint32_t ripOffset);
 
