@@ -12,10 +12,18 @@ const HMODULE Memory::GetBaseModuleHandle(const std::string& moduleName)
 	return moduleHandle;
 }
 
-uint8_t* Memory::ResolveRelativeAddress(uint8_t* address, uint32_t rvaOffset, uint32_t ripOffset)
+uintptr_t* Memory::GetAbsoluteAddress(uintptr_t* address, int preOffset, int postOffset)
 {
-	uint32_t rvaAddress = *reinterpret_cast<uint32_t*>(address + rvaOffset);
-	uint64_t ripAddress = reinterpret_cast<uint64_t>(address) + ripOffset;
+	address += preOffset;
+	address += sizeof(int32_t) + *reinterpret_cast<int32_t*>(address);
+	address += postOffset;
+	return address;
+}
 
-	return reinterpret_cast<uint8_t*>(rvaAddress + ripAddress);
+uintptr_t* Memory::ResolveRelativeAddress(uintptr_t* address, uint32_t rvaOffset, uint32_t ripOffset)
+{
+	uintptr_t rvaAddress = *reinterpret_cast<uint32_t*>(address + rvaOffset);
+	uintptr_t ripAddress = reinterpret_cast<uint64_t>(address) + ripOffset;
+
+	return reinterpret_cast<uintptr_t*>(rvaAddress + ripAddress);
 }
