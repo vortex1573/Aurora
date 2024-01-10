@@ -201,14 +201,14 @@
     <ClInclude Include="CEngineClient.hpp">
       <Filter>SDK\Interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="CInterfaceRegistry.hpp">
-      <Filter>SDK\Interfaces</Filter>
-    </ClInclude>
     <ClInclude Include="CHookObject.hpp">
       <Filter>Core\Hooks\Classes</Filter>
     </ClInclude>
     <ClInclude Include="CreateMove.hpp">
       <Filter>Core\Hooks\Hooks\CreateMove</Filter>
+    </ClInclude>
+    <ClInclude Include="CInterfaceRegistry.hpp">
+      <Filter>SDK\Classes</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

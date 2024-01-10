@@ -55,55 +55,55 @@ const dye::colorful<std::string> Logger::GetTimestamp()
 void Logger::Log(const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(Types::NONE) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::NONE) + msg << std::endl;
 #endif
 }
 
 void Logger::Log(const std::string& title, const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(Types::NONE) + GetCheatName() + "[" + title + "]" + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::NONE) + "[" + title + "]" + msg << std::endl;
 #endif
 }
 
 void Logger::Log(const Types type, const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(type) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(type) + msg << std::endl;
 #endif
 }
 
 void Logger::Log(const Types type, const std::string& title, const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(type) + GetCheatName() + "[" + title + "]" + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(type) + "[" + title + "]" + msg << std::endl;
 #endif
 }
 
 void Logger::Info(const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(Types::INFO) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::INFO) + msg << std::endl;
 #endif
 }
 
 void Logger::Warn(const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(Types::WARN) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::WARN) + msg << std::endl;
 #endif
 }
 
 void Logger::Error(const std::string& msg)
 {
 #ifdef LOGGING_ENABLED
-	std::cout << GetTimestamp() + FormatType(Types::ERR) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::ERR) + msg << std::endl;
 #endif
 }
 
 void Logger::Debug(const std::string& msg)
 {
 #if defined(DEBUG_LOGS_ENABLED) || defined(_DEBUG)
-	std::cout << GetTimestamp() + FormatType(Types::DEBUG) + GetCheatName() + msg << std::endl;
+	std::cout << GetTimestamp() + GetCheatName() + FormatType(Types::DEBUG) + msg << std::endl;
 #endif
 }
