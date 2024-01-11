@@ -24,6 +24,11 @@ public:
 		return Memory::CallVirtual<int>(this, 44u);
 	}
 
+	void GetScreenSize(int* width, int* height)
+	{
+		Memory::CallVirtual(this, 50u, &width, &height);
+	}
+
 	const char* GetLevelName()
 	{
 		return Memory::CallVirtual<const char*>(this, 53u);
