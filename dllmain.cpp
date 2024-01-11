@@ -13,7 +13,6 @@ DWORD WINAPI Initialize(LPVOID data)
         std::this_thread::sleep_for(std::chrono::milliseconds(250));
 
     try {
-        DisableThreadLibraryCalls(hModule);
         Logger::Initialize();
         Logger::Info("Initialized logger.");
         Instance::Initialize(hModule);
@@ -34,9 +33,12 @@ DWORD WINAPI Initialize(LPVOID data)
 
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD callReason, LPVOID lpReserved)
 {
-    if (callReason == DLL_PROCESS_ATTACH)
+    if (callReason == DLL_PROCESS_ATTACH) {
+        DisableThreadLibraryCalls(hModule);
+
         if (const HANDLE threadHandle = CreateThread(NULL, NULL, Initialize, hModule, NULL, NULL); threadHandle != nullptr)
             CloseHandle(threadHandle);
+    }
 
     if (callReason == DLL_PROCESS_DETACH && !lpReserved)
         Instance::Shutdown();
