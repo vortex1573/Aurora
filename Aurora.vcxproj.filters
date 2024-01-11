@@ -59,6 +59,9 @@
     <ClCompile Include="Utility.cpp">
       <Filter>Core\Utilities\Utility</Filter>
     </ClCompile>
+    <ClCompile Include="InputSystem.cpp">
+      <Filter>Core\Utilities\InputSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SDK">
@@ -135,6 +138,15 @@
     </Filter>
     <Filter Include="Core\Utilities\Utility">
       <UniqueIdentifier>{93f781c7-46be-4a4d-b382-9702d3f792b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\Hooks\Present">
+      <UniqueIdentifier>{4a7e0250-84f2-4edd-94c4-0d96b0b7a53d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Hooks\Hooks\ResizeBuffers">
+      <UniqueIdentifier>{06537d33-46be-4a0c-a6cd-9efc69c86c82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\InputSystem">
+      <UniqueIdentifier>{93558460-be06-4219-a6b0-578a960ff88c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -230,6 +242,9 @@
     </ClInclude>
     <ClInclude Include="Utility.hpp">
       <Filter>Core\Utilities\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="InputSystem.hpp">
+      <Filter>Core\Utilities\InputSystem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

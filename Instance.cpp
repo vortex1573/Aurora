@@ -8,6 +8,8 @@ void Instance::Initialize(const HMODULE hModule)
 
 		Hooks::Initialize();
 		Interfaces::Initialize();
+		InputSystem::Initialize();
+		Menu::Initialize();
 
 		std::chrono::milliseconds endMs = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch());
 		Logger::Info(std::format("Initialized in {0}ms.", endMs.count() - startMs.count()));
@@ -19,6 +21,8 @@ void Instance::Initialize(const HMODULE hModule)
 
 void Instance::Shutdown()
 {
+	Menu::Shutdown();
 	Hooks::Shutdown();
+	InputSystem::Shutdown();
 	Logger::Shutdown();
 }

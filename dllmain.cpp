@@ -15,8 +15,8 @@ DWORD WINAPI Initialize(LPVOID data)
 
     Logger::Initialize();
     Logger::Info("Initialized logger.");
-    Instance::Initialize(hModule);
     Utility::Initialize(hModule, FOLDER_PATH, FILE_EXTENSION);
+    Instance::Initialize(hModule);
 
     while (!Instance::Unload)
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
