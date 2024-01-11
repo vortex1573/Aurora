@@ -2,6 +2,7 @@
 #include <Windows.h>
 
 #include "Logger.hpp"
+#include "Utility.hpp"
 #include "Defines.hpp"
 #include "Instance.hpp"
 
@@ -15,6 +16,7 @@ DWORD WINAPI Initialize(LPVOID data)
     Logger::Initialize();
     Logger::Info("Initialized logger.");
     Instance::Initialize(hModule);
+    Utility::Initialize(hModule, FOLDER_PATH, FILE_EXTENSION);
 
     while (!Instance::Unload)
         std::this_thread::sleep_for(std::chrono::milliseconds(50));

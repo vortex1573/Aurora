@@ -53,6 +53,12 @@
     <ClCompile Include="CreateMove.cpp">
       <Filter>Core\Hooks\Hooks\CreateMove</Filter>
     </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Core\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Core\Utilities\Utility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SDK">
@@ -120,6 +126,15 @@
     </Filter>
     <Filter Include="Core\Hooks\Hooks\CreateMove">
       <UniqueIdentifier>{5345f320-ea47-4299-bdbd-6891bb8aab4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Menu\Config">
+      <UniqueIdentifier>{e4f14561-aacc-4fbd-a9bc-55d7c300646c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Menu\Framework">
+      <UniqueIdentifier>{659963a3-a6a4-4b07-ad93-ffafbc82434c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\Utility">
+      <UniqueIdentifier>{93f781c7-46be-4a4d-b382-9702d3f792b3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -210,8 +225,11 @@
     <ClInclude Include="CInterfaceRegistry.hpp">
       <Filter>SDK\Classes</Filter>
     </ClInclude>
-    <ClInclude Include="ErrorHandler.hpp">
-      <Filter>Dependencies</Filter>
+    <ClInclude Include="Menu.hpp">
+      <Filter>Core\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.hpp">
+      <Filter>Core\Utilities\Utility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

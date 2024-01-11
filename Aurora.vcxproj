@@ -229,14 +229,15 @@
     <ClCompile Include="Interfaces.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="trampoline.c" />
+    <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
     <ClInclude Include="CHookObject.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="CreateMove.hpp" />
-    <ClInclude Include="ErrorHandler.hpp" />
     <ClInclude Include="FNVHash.hpp" />
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />
@@ -257,11 +258,13 @@
     <ClInclude Include="Logger.hpp" />
     <ClInclude Include="Defines.hpp" />
     <ClInclude Include="Memory.hpp" />
+    <ClInclude Include="Menu.hpp" />
     <ClInclude Include="MinHook.h" />
     <ClInclude Include="pstdint.h" />
     <ClInclude Include="table32.h" />
     <ClInclude Include="table64.h" />
     <ClInclude Include="trampoline.h" />
+    <ClInclude Include="Utility.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

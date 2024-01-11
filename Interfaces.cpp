@@ -13,7 +13,7 @@ uint8_t* Interfaces::GetCreateInterface(const std::string& moduleName)
 	uint8_t* createInterface = reinterpret_cast<uint8_t*>(GetProcAddress(moduleHandle, "CreateInterface"));
 
 	if (!createInterface)
-		ErrorHandler::Error("Failed to get 'CreateInterface' for module '" + moduleName + "'.");
+		Utility::Error("Failed to get 'CreateInterface' for module '" + moduleName + "'.");
 
 	return createInterface;
 }
@@ -24,7 +24,7 @@ CInterfaceRegistry* Interfaces::GetInterfaceRegistry(const std::string& moduleNa
 	CInterfaceRegistry* interfaceRegistry = *reinterpret_cast<CInterfaceRegistry**>(Memory::ResolveRelativeAddress(createInterface, 0x3, 0x7));
 
 	if (!interfaceRegistry)
-		ErrorHandler::Error("Failed to get interface list for module '" + moduleName + "'.");
+		Utility::Error("Failed to get interface list for module '" + moduleName + "'.");
 
 	return interfaceRegistry;
 }
@@ -44,7 +44,7 @@ uintptr_t* Interfaces::GetInterface(const std::string& moduleName, const std::st
 	}
 
 	if (!ret)
-		ErrorHandler::Error("Failed to get interface " + moduleName + "->" + interfaceName + " from module '" + moduleName + "'.");
+		Utility::Error("Failed to get interface " + moduleName + "->" + interfaceName + " from module '" + moduleName + "'.");
 
 	return ret;
 }

@@ -2,12 +2,12 @@
 
 #include "MinHook.h"
 #include "Logger.hpp"
-#include "ErrorHandler.hpp"
+#include "Utility.hpp"
 
 #include "CreateMove.hpp"
 
 namespace Hooks {
-	static bool Initialized = false;
+	inline bool Initialized = false;
 
 	void Initialize();
 	void Shutdown();
