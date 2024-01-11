@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <stdexcept>
 
-#include "Logger.hpp"
+#include "Instance.hpp"
 
 // https://github.com/maecry/asphyxia-cs2/blob/master/cstrike/utilities/memory.h
 // https://www.unknowncheats.me/forum/c-and-c-/277501-calling-virtual-functions-easy.html

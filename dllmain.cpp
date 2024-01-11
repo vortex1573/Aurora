@@ -12,15 +12,9 @@ DWORD WINAPI Initialize(LPVOID data)
     while (!Memory::GetBaseModuleHandle("navsystem.dll"))
         std::this_thread::sleep_for(std::chrono::milliseconds(250));
 
-    try {
-        Logger::Initialize();
-        Logger::Info("Initialized logger.");
-        Instance::Initialize(hModule);
-    }
-    catch (const std::runtime_error& err) {
-        Logger::Error(std::format("Failed to initialize: {0}", err.what()));
-        FreeLibraryAndExitThread(hModule, EXIT_SUCCESS);
-    }
+    Logger::Initialize();
+    Logger::Info("Initialized logger.");
+    Instance::Initialize(hModule);
 
     while (!Instance::Unload)
         std::this_thread::sleep_for(std::chrono::milliseconds(50));

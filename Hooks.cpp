@@ -11,19 +11,15 @@ void Hooks::Initialize()
 
 	Logger::Debug("Initializing MinHook.");
 
-	if (MH_Initialize() != MH_OK) {
-		Logger::Error("Failed to initialize MinHook.");
-		throw std::runtime_error("Failed to initialize MinHook.");
-	}
+	if (MH_Initialize() != MH_OK)
+		Instance::Error("Failed to initialize MinHook.");
 
 	InstallHooks();
 
 	Logger::Debug("Enabling hooks.");
 
-	if (MH_EnableHook(MH_ALL_HOOKS) != MH_OK) {
-		Logger::Error("Failed to enable all hooks.");
-		throw std::runtime_error("Failed to enable all hooks.");
-	}
+	if (MH_EnableHook(MH_ALL_HOOKS) != MH_OK)
+		Instance::Error("Failed to enable all hooks.");
 
 	Initialized = true;
 }
@@ -35,15 +31,11 @@ void Hooks::Shutdown()
 		return;
 	}
 
-	if (MH_DisableHook(MH_ALL_HOOKS) != MH_OK) {
-		Logger::Error("Failed to disable all hooks.");
-		throw std::runtime_error("Failed to disable all hooks.");
-	}
+	if (MH_DisableHook(MH_ALL_HOOKS) != MH_OK)
+		Instance::Error("Failed to disable all hooks.");
 
-	if (MH_Uninitialize() != MH_OK) {
-		Logger::Error("Failed to uninitialize MinHook.");
-		throw std::runtime_error("Failed to uninitialize MinHook.");
-	}
+	if (MH_Uninitialize() != MH_OK)
+		Instance::Error("Failed to uninitialize MinHook.");
 }
 
 void Hooks::InstallHooks()

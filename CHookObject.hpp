@@ -2,6 +2,7 @@
 
 #include "MinHook.h"
 #include "Logger.hpp"
+#include "Instance.hpp"
 
 template <typename T>
 class CHookObject {
@@ -15,10 +16,8 @@ public:
 
 		Logger::Debug(std::format("Installing detour {0}.", this->name));
 
-		if (MH_CreateHook(target, detour, reinterpret_cast<void**>(&this->original)) != MH_OK) {
-			Logger::Error(std::format("Failed to install detour {0}.", this->name));
-			throw std::runtime_error(std::format("Failed to install detour {0}.", this->name));
-		}
+		if (MH_CreateHook(target, detour, reinterpret_cast<void**>(&this->original)) != MH_OK)
+			Instance::Error(std::format("Failed to install detour {0}.", this->name));
 	}
 
 	__forceinline const std::string& GetName()

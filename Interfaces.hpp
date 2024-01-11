@@ -7,6 +7,7 @@
 #include "Logger.hpp"
 #include "Memory.hpp"
 #include "FNVHash.hpp"
+#include "Instance.hpp"
 #include "CEngineClient.hpp"
 #include "CInterfaceRegistry.hpp"
 
@@ -16,6 +17,7 @@ namespace Interfaces {
 	inline CEngineClient* Engine = nullptr;
 
 	void Initialize();
-	CInterfaceRegistry* GetInterfaceRegistry(const std::string& moduleName, uint8_t* createInterface);
+	uint8_t* GetCreateInterface(const std::string& moduleName);
+	CInterfaceRegistry* GetInterfaceRegistry(const std::string& moduleName);
 	uintptr_t* GetInterface(const std::string& moduleName, const std::string& interfaceName);
 }
