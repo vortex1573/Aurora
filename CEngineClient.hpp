@@ -34,8 +34,8 @@ public:
 		return Memory::CallVirtual<const char*>(this, 54u);
 	}
 
-	int GetEngineBuildNumber()
+	const char* GetProductVersionString()
 	{
-		return Memory::CallVirtual<int>(this, 77u);
+		return Memory::CallVirtual<const char*>(this, 77u);
 	}
 };
