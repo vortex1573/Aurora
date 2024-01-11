@@ -2,7 +2,7 @@
 
 #include "MinHook.h"
 #include "Logger.hpp"
-#include "Instance.hpp"
+#include "ErrorHandler.hpp"
 
 #include "CreateMove.hpp"
 

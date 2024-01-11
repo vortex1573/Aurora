@@ -210,5 +210,8 @@
     <ClInclude Include="CInterfaceRegistry.hpp">
       <Filter>SDK\Classes</Filter>
     </ClInclude>
+    <ClInclude Include="ErrorHandler.hpp">
+      <Filter>Dependencies</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

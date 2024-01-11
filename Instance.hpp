@@ -3,8 +3,8 @@
 #include <chrono>
 
 #include "Hooks.hpp"
-#include "Instance.hpp"
 #include "Interfaces.hpp"
+#include "ErrorHandler.hpp"
 
 namespace Instance {
 	inline bool Unload = false;
@@ -12,6 +12,4 @@ namespace Instance {
 
 	void Initialize(const HMODULE hModule);
 	void Shutdown();
-
-	void Error(const std::string& errorMessage);
 }

@@ -236,6 +236,7 @@
     <ClInclude Include="CHookObject.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="CreateMove.hpp" />
+    <ClInclude Include="ErrorHandler.hpp" />
     <ClInclude Include="FNVHash.hpp" />
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />

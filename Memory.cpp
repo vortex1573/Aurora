@@ -4,9 +4,8 @@ const HMODULE Memory::GetBaseModuleHandle(const std::string& moduleName)
 {
 	const HMODULE moduleHandle = GetModuleHandleA(moduleName.c_str());
 
-	if (!moduleHandle) {
-		Instance::Error("Failed to get module handle for module '" + moduleName + "'.");
-	}
+	if (!moduleHandle)
+		ErrorHandler::Error("Failed to get module handle for module '" + moduleName + "'.");
 
 	return moduleHandle;
 }

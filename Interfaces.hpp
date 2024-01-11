@@ -7,7 +7,7 @@
 #include "Logger.hpp"
 #include "Memory.hpp"
 #include "FNVHash.hpp"
-#include "Instance.hpp"
+#include "ErrorHandler.hpp"
 #include "CEngineClient.hpp"
 #include "CInterfaceRegistry.hpp"
 

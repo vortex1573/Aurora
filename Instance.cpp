@@ -15,7 +15,7 @@ void Instance::Initialize(const HMODULE hModule)
 		Logger::Info(std::format("Initialized in {0}ms.", endMs.count() - startMs.count()));
 	}
 	catch (const std::runtime_error& err) {
-		Error(std::format("Failed to initialize: {0}", err.what()));
+		ErrorHandler::Error(std::format("Failed to initialize: {0}", err.what()));
 	}
 }
 
@@ -23,13 +23,4 @@ void Instance::Shutdown()
 {
 	Hooks::Shutdown();
 	Logger::Shutdown();
-}
-
-void Instance::Error(const std::string& errorMessage)
-{
-	Logger::Error(errorMessage);
-	throw std::runtime_error(errorMessage);
-
-	if (MessageBoxA(nullptr, errorMessage.c_str(), "An error has occurred!", MB_OK | MB_ICONERROR | MB_SETFOREGROUND | MB_TOPMOST) == IDOK)
-		FreeLibraryAndExitThread(hModule, EXIT_SUCCESS);
 }
