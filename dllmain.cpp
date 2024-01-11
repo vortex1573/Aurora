@@ -35,7 +35,7 @@ DWORD WINAPI Initialize(LPVOID data)
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD callReason, LPVOID lpReserved)
 {
     if (callReason == DLL_PROCESS_ATTACH)
-        if (const HANDLE threadHandle = CreateThread(NULL, NULL, Initialize, hModule, NULL, NULL); threadHandle)
+        if (const HANDLE threadHandle = CreateThread(NULL, NULL, Initialize, hModule, NULL, NULL); threadHandle != nullptr)
             CloseHandle(threadHandle);
 
     if (callReason == DLL_PROCESS_DETACH && !lpReserved)
