@@ -10,7 +10,7 @@ DWORD WINAPI Initialize(LPVOID data)
 {
     const HMODULE hModule = reinterpret_cast<HMODULE>(data);
 
-    while (!Memory::GetBaseModuleHandle("navsystem.dll"))
+    while (!Memory::GetBaseModuleHandle("navsystem.dll") || !Memory::GetBaseModuleHandle("matchmaking.dll"))
         std::this_thread::sleep_for(std::chrono::milliseconds(250));
 
     Logger::Initialize();

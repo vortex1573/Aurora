@@ -148,6 +148,24 @@
     <Filter Include="Core\Utilities\InputSystem">
       <UniqueIdentifier>{93558460-be06-4219-a6b0-578a960ff88c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SDK\Classes\Common">
+      <UniqueIdentifier>{7af9ec4b-f4fb-4684-8451-79ec6c224094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Classes\SchemaSystem">
+      <UniqueIdentifier>{4a7671b8-bb8d-47d5-aee3-0ac3f87618c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Enums">
+      <UniqueIdentifier>{112ebe40-7ea2-4518-bd74-6261f2051c54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Other">
+      <UniqueIdentifier>{aca27238-99ba-49a3-b1ae-c0a55d2f01ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Structs\SchemaSystem">
+      <UniqueIdentifier>{261259aa-a2c2-4a63-9d64-65cd9b340442}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Enums\SchemaSystem">
+      <UniqueIdentifier>{03ff6bb0-b010-4285-9c5c-768d4bb6b9c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Logger.hpp">
@@ -246,5 +264,25 @@
     <ClInclude Include="InputSystem.hpp">
       <Filter>Core\Utilities\InputSystem</Filter>
     </ClInclude>
+    <ClInclude Include="CSchemaSystem.hpp">
+      <Filter>SDK\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CSchemaSystemTypeScope.hpp">
+      <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtlMap.hpp">
+      <Filter>SDK\Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaDefinitions.hpp">
+      <Filter>SDK\Other</Filter>
+    </ClInclude>
+    <ClInclude Include="CCSGOInput.hpp">
+      <Filter>SDK\Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SchemaClassInfoData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -236,9 +236,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="buffer.h" />
+    <ClInclude Include="CCSGOInput.hpp" />
     <ClInclude Include="CHookObject.hpp" />
     <ClInclude Include="Color.hpp" />
     <ClInclude Include="CreateMove.hpp" />
+    <ClInclude Include="CSchemaSystem.hpp" />
+    <ClInclude Include="CSchemaSystemTypeScope.hpp" />
+    <ClInclude Include="CUtlMap.hpp" />
     <ClInclude Include="FNVHash.hpp" />
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />
@@ -263,10 +267,14 @@
     <ClInclude Include="Menu.hpp" />
     <ClInclude Include="MinHook.h" />
     <ClInclude Include="pstdint.h" />
+    <ClInclude Include="SchemaDefinitions.hpp" />
     <ClInclude Include="table32.h" />
     <ClInclude Include="table64.h" />
     <ClInclude Include="trampoline.h" />
     <ClInclude Include="Utility.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SchemaClassInfoData.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
