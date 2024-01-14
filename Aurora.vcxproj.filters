@@ -300,6 +300,60 @@
     <ClInclude Include="IMemAlloc.hpp">
       <Filter>SDK\Interfaces\IMemAlloc</Filter>
     </ClInclude>
+    <ClInclude Include="SchemaClassFlags.hpp">
+      <Filter>SDK\Enums\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="ETypeCategory.hpp">
+      <Filter>SDK\Enums\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="EAtomicCategory.hpp">
+      <Filter>SDK\Enums\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="FieldType.hpp">
+      <Filter>SDK\Enums\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaVarName.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaNetworkValue.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaMetadataEntryData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaEnumeratorInfoData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CSchemaEnumInfoData.hpp">
+      <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CSchemaEnumInfo.hpp">
+      <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CSchemaType.hpp">
+      <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaClassFieldData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaFieldMetadataOverrideData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaStaticFieldData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaBaseClassInfoData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaFieldMetadataOverrideSetData.hpp">
+      <Filter>SDK\Structs\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="CSchemaClassInfo.hpp">
+      <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="SchemaBindings.hpp">
+      <Filter>SDK\Other</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SchemaClassInfoData.hpp">
