@@ -62,6 +62,9 @@
     <ClCompile Include="InputSystem.cpp">
       <Filter>Core\Utilities\InputSystem</Filter>
     </ClCompile>
+    <ClCompile Include="IMemAlloc.cpp">
+      <Filter>SDK\Interfaces\IMemAlloc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SDK">
@@ -165,6 +168,9 @@
     </Filter>
     <Filter Include="SDK\Enums\SchemaSystem">
       <UniqueIdentifier>{03ff6bb0-b010-4285-9c5c-768d4bb6b9c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\Interfaces\IMemAlloc">
+      <UniqueIdentifier>{4994a5ee-bea8-4464-b88d-8615d0523408}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -278,6 +284,21 @@
     </ClInclude>
     <ClInclude Include="CCSGOInput.hpp">
       <Filter>SDK\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtlMemory.hpp">
+      <Filter>SDK\Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtlString.hpp">
+      <Filter>SDK\Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtlTSHash.hpp">
+      <Filter>SDK\Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="CUtlVector.hpp">
+      <Filter>SDK\Classes\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="IMemAlloc.hpp">
+      <Filter>SDK\Interfaces\IMemAlloc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

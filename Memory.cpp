@@ -10,6 +10,16 @@ const HMODULE Memory::GetBaseModuleHandle(const std::string& moduleName)
 	return moduleHandle;
 }
 
+const FARPROC Memory::GetProcessAddress(const HMODULE moduleHandle, const std::string& externalName)
+{
+	const FARPROC processAddress = GetProcAddress(moduleHandle, externalName.c_str());
+
+	if (!processAddress)
+		Utility::Error("Failed to get process address '" + externalName + "'.");
+
+	return processAddress;
+}
+
 template <typename T = uintptr_t>
 T* Memory::GetAbsoluteAddress(T* address, int preOffset, int postOffset)
 {

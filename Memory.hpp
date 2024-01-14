@@ -9,6 +9,7 @@
 // https://www.unknowncheats.me/forum/c-and-c-/277501-calling-virtual-functions-easy.html
 namespace Memory {
 	const HMODULE GetBaseModuleHandle(const std::string& moduleName);
+	const FARPROC GetProcessAddress(const HMODULE moduleHandle, const std::string& externalName);
 
 	template <typename T>
 	T* GetAbsoluteAddress(T* address, int preOffset, int postOffset);

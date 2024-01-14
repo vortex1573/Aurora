@@ -219,6 +219,7 @@
     <ClCompile Include="hde64.c" />
     <ClCompile Include="hook.c" />
     <ClCompile Include="Hooks.cpp" />
+    <ClCompile Include="IMemAlloc.cpp" />
     <ClCompile Include="imgui.cpp" />
     <ClCompile Include="imgui_draw.cpp" />
     <ClCompile Include="imgui_impl_dx11.cpp" />
@@ -243,12 +244,17 @@
     <ClInclude Include="CSchemaSystem.hpp" />
     <ClInclude Include="CSchemaSystemTypeScope.hpp" />
     <ClInclude Include="CUtlMap.hpp" />
+    <ClInclude Include="CUtlMemory.hpp" />
+    <ClInclude Include="CUtlString.hpp" />
+    <ClInclude Include="CUtlTSHash.hpp" />
+    <ClInclude Include="CUtlVector.hpp" />
     <ClInclude Include="FNVHash.hpp" />
     <ClInclude Include="hde32.h" />
     <ClInclude Include="hde64.h" />
     <ClInclude Include="Hooks.hpp" />
     <ClInclude Include="CEngineClient.hpp" />
     <ClInclude Include="imconfig.h" />
+    <ClInclude Include="IMemAlloc.hpp" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_impl_dx11.h" />
     <ClInclude Include="imgui_impl_win32.h" />
