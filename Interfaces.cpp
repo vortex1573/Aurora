@@ -5,12 +5,16 @@ void Interfaces::Initialize()
 	Logger::Info("Initializing interfaces.");
 
 	Engine = reinterpret_cast<CEngineClient*>(GetInterface("engine2.dll", "Source2EngineToClient001"));
+	SchemaSystem = reinterpret_cast<CSchemaSystem*>(GetInterface("schemasystem.dll", "SchemaSystem_001"));
+
+	// 
+	Input = reinterpret_cast<CCSGOInput*>(/* PATTERN SCAN HERE */NULL);
 }
 
 uint8_t* Interfaces::GetCreateInterface(const std::string& moduleName)
 {
 	const HMODULE moduleHandle = Memory::GetBaseModuleHandle(moduleName);
-	uint8_t* createInterface = reinterpret_cast<uint8_t*>(GetProcAddress(moduleHandle, "CreateInterface"));
+	uint8_t* createInterface = reinterpret_cast<uint8_t*>(Memory::GetProcessAddress(moduleHandle, "CreateInterface"));
 
 	if (!createInterface)
 		Utility::Error("Failed to get 'CreateInterface' for module '" + moduleName + "'.");
