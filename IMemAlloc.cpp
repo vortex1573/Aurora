@@ -3,9 +3,8 @@
 #include "IMemAlloc.hpp"
 
 IMemAlloc* GetMemAlloc() {
-    const HMODULE moduleHandle = Memory::GetBaseModuleHandle("tier0.dll");
-    static IMemAlloc* memAlloc = *reinterpret_cast<IMemAlloc**>(Memory::GetProcessAddress(moduleHandle, "g_pMemAlloc"));
-    return memAlloc;
+    static auto p_mem_alloc = *reinterpret_cast<IMemAlloc**>(Memory::GetProcessAddress(Memory::GetBaseModuleHandle("tier0.dll"), "g_pMemAlloc"));
+    return p_mem_alloc;
 }
 
 _VCRT_ALLOCATOR void* __CRTDECL operator new(std::size_t s) noexcept(false) {
