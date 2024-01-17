@@ -15,8 +15,35 @@ void InputSystem::Shutdown()
 
 LRESULT WINAPI InputSystem::WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
-	if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
-		return true;
+	switch (msg)
+	{
+	case WM_KEYDOWN:
+		keysDown.push_back(wParam);
+		break;
+	case WM_KEYUP:
+		if (IsKeyPressed(wParam)) {
+			size_t idx = 0;
+
+			for (std::vector<WPARAM>::size_type i = 0; i != keysDown.size(); i++)
+				if (keysDown[i] == wParam)
+					idx = i;
+
+			keysDown.erase(keysDown.begin() + idx);
+		}
+		break;
+	}
+
+	/*if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+		return true;*/
 
 	return CallWindowProcW(originalWndProc, hWnd, msg, wParam, lParam);
+}
+
+bool InputSystem::IsKeyPressed(WPARAM key)
+{
+	for (WPARAM& element : keysDown)
+		if (element == key)
+			return true;
+
+	return false;
 }
