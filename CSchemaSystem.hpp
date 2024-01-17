@@ -2,8 +2,8 @@
 
 #include "Memory.hpp"
 #include "CUtlVector.hpp"
-#include "SchemaBindings.hpp"
-#include "SchemaDefinitions.hpp"
+#include "CSchemaEnumInfo.hpp"
+#include "CSchemaClassInfo.hpp"
 #include "CSchemaSystemTypeScope.hpp"
 
 class CSchemaSystem {
@@ -26,24 +26,24 @@ public:
         return Memory::CallVirtual<CSchemaSystemTypeScope*>(this, 14u, type, binding);
     }
 
-    const char* GetClassInfoBinaryName(CSchemaClassBinding* class_info) {
+    const char* GetClassInfoBinaryName(CSchemaClassInfo* class_info) {
         return Memory::CallVirtual<const char*>(this, 22, class_info);
     }
 
-    const char* GetClassProjectName(CSchemaClassBinding* class_info) {
+    const char* GetClassProjectName(CSchemaClassInfo* class_info) {
         return Memory::CallVirtual<const char*>(this, 23, class_info);
     }
 
-    const char* GetEnumBinaryName(CSchemaEnumBinding* enum_info) {
+    const char* GetEnumBinaryName(CSchemaEnumInfo* enum_info) {
         return Memory::CallVirtual<const char*>(this, 24, enum_info);
     }
 
-    const char* GetEnumProjectName(CSchemaEnumBinding* enum_info) {
+    const char* GetEnumProjectName(CSchemaEnumInfo* enum_info) {
         return Memory::CallVirtual<const char*>(this, 25, enum_info);
     }
 
-    CSchemaClassBinding* ValidateClasses(CSchemaClassBinding** class_info) {
-        return Memory::CallVirtual<CSchemaClassBinding*>(this, CSCHEMASYSTEM_VALIDATECLASSES, class_info);
+    CSchemaClassInfo* ValidateClasses(CSchemaClassInfo** class_info) {
+        return Memory::CallVirtual<CSchemaClassInfo*>(this, CSCHEMASYSTEM_VALIDATECLASSES, class_info);
     }
 
     bool SchemaSystemIsReady() {

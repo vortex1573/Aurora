@@ -4,9 +4,8 @@
 #include <optional>
 #include <string_view>
 
-#include "SchemaBindings.hpp"
-#include "SchemaClassInfoData.hpp"
 #include "SchemaClassFlags.hpp"
+#include "SchemaClassInfoData.hpp"
 #include "SchemaClassFieldData.hpp"
 #include "SchemaStaticFieldData.hpp"
 #include "SchemaMetadataEntryData.hpp"
@@ -117,8 +116,8 @@ public:
         return reinterpret_cast<Fn>(m_fn)(SchemaClassInfoFunctionIndex::kDestroyInstanceWithMemory, instance);
     }
 
-    CSchemaClassBinding* SchemaClassBinding(void* entity) const {
-        using Fn = CSchemaClassBinding * (*)(SchemaClassInfoFunctionIndex, void*);
+    CSchemaClassInfo* SchemaClassBinding(void* entity) const {
+        using Fn = CSchemaClassInfo * (*)(SchemaClassInfoFunctionIndex, void*);
         return reinterpret_cast<Fn>(m_fn)(SchemaClassInfoFunctionIndex::kSchemaDynamicBinding, entity);
     }
 };

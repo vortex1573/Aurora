@@ -5,8 +5,13 @@
 #include "Memory.hpp"
 #include "CUtlTSHash.hpp"
 #include "CSchemaType.hpp"
-#include "SchemaBindings.hpp"
+#include "CSchemaEnumInfo.hpp"
+#include "CSchemaClassInfo.hpp"
 #include "SchemaDefinitions.hpp"
+
+class CSchemaType;
+class CSchemaEnumInfo;
+class CSchemaClassInfo;
 
 class CSchemaSystemTypeScope {
 public:
@@ -16,8 +21,8 @@ public:
         return class_info;
     }
 
-    CSchemaEnumBinding* FindDeclaredEnum(const char* name) {
-        return Memory::CallVirtual<CSchemaEnumBinding*>(this, 3, name);
+    CSchemaEnumInfo* FindDeclaredEnum(const char* name) {
+        return Memory::CallVirtual<CSchemaEnumInfo*>(this, 3, name);
     }
 
     CSchemaType* FindSchemaTypeByName(const char* name, std::uintptr_t* schema) {
@@ -32,30 +37,30 @@ public:
         return Memory::CallVirtual<CSchemaType*>(this, 6, name);
     }
 
-    CSchemaClassBinding* FindRawClassBinding(const char* name) {
-        return Memory::CallVirtual<CSchemaClassBinding*>(this, 7, name);
+    CSchemaClassInfo* FindRawClassBinding(const char* name) {
+        return Memory::CallVirtual<CSchemaClassInfo*>(this, 7, name);
     }
 
-    CSchemaEnumBinding* FindRawEnumBinding(const char* name) {
-        return Memory::CallVirtual<CSchemaEnumBinding*>(this, 8, name);
+    CSchemaEnumInfo* FindRawEnumBinding(const char* name) {
+        return Memory::CallVirtual<CSchemaEnumInfo*>(this, 8, name);
     }
 
     std::string_view GetScopeName() {
         return { m_name_.data() };
     }
 
-    [[nodiscard]] CUtlTSHash<CSchemaClassBinding*> GetClasses() const {
+    [[nodiscard]] CUtlTSHash<CSchemaClassInfo*> GetClasses() const {
         return m_classes_;
     }
 
-    [[nodiscard]] CUtlTSHash<CSchemaEnumBinding*> GetEnums() const {
+    [[nodiscard]] CUtlTSHash<CSchemaEnumInfo*> GetEnums() const {
         return m_enumes_;
     }
 private:
     void* vftable_ = nullptr;
     std::array<char, 256> m_name_ = {};
     char pad_0x0108[SCHEMASYSTEMTYPESCOPE_OFF1] = {}; // 0x0108
-    CUtlTSHash<CSchemaClassBinding*> m_classes_; // 0x0588
+    CUtlTSHash<CSchemaClassInfo*> m_classes_; // 0x0588
     char pad_0x0594[SCHEMASYSTEMTYPESCOPE_OFF2] = {}; // 0x05C8
-    CUtlTSHash<CSchemaEnumBinding*> m_enumes_; // 0x2DD0
+    CUtlTSHash<CSchemaEnumInfo*> m_enumes_; // 0x2DD0
 };

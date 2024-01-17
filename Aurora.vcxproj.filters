@@ -351,9 +351,6 @@
     <ClInclude Include="CSchemaClassInfo.hpp">
       <Filter>SDK\Classes\SchemaSystem</Filter>
     </ClInclude>
-    <ClInclude Include="SchemaBindings.hpp">
-      <Filter>SDK\Other</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="SchemaClassInfoData.hpp">

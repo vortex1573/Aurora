@@ -3,9 +3,13 @@
 #include <cstdint>
 
 #include "ETypeCategory.hpp"
-#include "SchemaBindings.hpp"
+#include "CSchemaEnumInfo.hpp"
 #include "SchemaDefinitions.hpp"
 #include "CSchemaSystemTypeScope.hpp"
+
+class CSchemaEnumInfo;
+class CSchemaClassInfo;
+class CSchemaSystemTypeScope;
 
 class CSchemaType {
 public:
@@ -64,7 +68,7 @@ public:
     {
         CSchemaType* m_schema_type_;
         CSchemaClassInfo* m_class_info;
-        CSchemaEnumBinding* m_enum_binding_;
+        CSchemaEnumInfo* m_enum_binding_;
         array_t m_array_;
         atomic_t m_atomic_t_;
         atomic_tt m_atomic_tt_;
