@@ -8,6 +8,7 @@ void Instance::Initialize(const HMODULE hModule)
 
 		Hooks::Initialize();
 		Interfaces::Initialize();
+		DirectX::Initialize();
 		Menu::Initialize();
 		InputSystem::Initialize();
 
@@ -21,6 +22,7 @@ void Instance::Initialize(const HMODULE hModule)
 
 void Instance::Shutdown()
 {
+	DirectX::Shutdown();
 	Menu::Shutdown();
 	Hooks::Shutdown();
 	InputSystem::Shutdown();

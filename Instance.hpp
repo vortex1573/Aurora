@@ -5,6 +5,7 @@
 #include "Menu.hpp"
 #include "Hooks.hpp"
 #include "Utility.hpp"
+#include "DirectX.hpp"
 #include "Interfaces.hpp"
 #include "InputSystem.hpp"
 

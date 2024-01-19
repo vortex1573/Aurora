@@ -2,7 +2,6 @@
 
 void Menu::Initialize()
 {
-	IMGUI_CHECKVERSION();
 	ImGui::CreateContext();
 }
 
