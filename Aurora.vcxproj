@@ -214,6 +214,7 @@
   <ItemGroup>
     <ClCompile Include="buffer.c" />
     <ClCompile Include="CreateMove.cpp" />
+    <ClCompile Include="DirectX.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="hde32.c" />
     <ClCompile Include="hde64.c" />
@@ -252,6 +253,7 @@
     <ClInclude Include="CUtlString.hpp" />
     <ClInclude Include="CUtlTSHash.hpp" />
     <ClInclude Include="CUtlVector.hpp" />
+    <ClInclude Include="DirectX.hpp" />
     <ClInclude Include="EAtomicCategory.hpp" />
     <ClInclude Include="ETypeCategory.hpp" />
     <ClInclude Include="FieldType.hpp" />

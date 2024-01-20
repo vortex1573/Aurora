@@ -160,6 +160,8 @@ bool DirectX::CreateRenderTargetView(IDXGISwapChain* swapChain)
 
 	backBuffer->Release();
 	backBuffer = nullptr;
+
+	return true;
 }
 
 HRESULT __stdcall DirectX::hkPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT Flags)

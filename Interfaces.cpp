@@ -5,10 +5,7 @@ void Interfaces::Initialize()
 	Logger::Info("Initializing interfaces.");
 
 	Engine = reinterpret_cast<CEngineClient*>(GetInterface("engine2.dll", "Source2EngineToClient001"));
-	SchemaSystem = reinterpret_cast<CSchemaSystem*>(GetInterface("schemasystem.dll", "SchemaSystem_001"));
-
-	// 
-	Input = reinterpret_cast<CCSGOInput*>(/* PATTERN SCAN HERE */NULL);
+	// SchemaSystem = reinterpret_cast<CSchemaSystem*>(GetInterface("schemasystem.dll", "SchemaSystem_001"));
 }
 
 uint8_t* Interfaces::GetCreateInterface(const std::string& moduleName)

@@ -65,6 +65,9 @@
     <ClCompile Include="IMemAlloc.cpp">
       <Filter>SDK\Interfaces\IMemAlloc</Filter>
     </ClCompile>
+    <ClCompile Include="DirectX.cpp">
+      <Filter>Core\Utilities\DirectX</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="SDK">
@@ -171,6 +174,9 @@
     </Filter>
     <Filter Include="SDK\Interfaces\IMemAlloc">
       <UniqueIdentifier>{4994a5ee-bea8-4464-b88d-8615d0523408}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core\Utilities\DirectX">
+      <UniqueIdentifier>{489c70a9-4f9e-40a9-abec-c5217f8e172a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -350,6 +356,9 @@
     </ClInclude>
     <ClInclude Include="CSchemaClassInfo.hpp">
       <Filter>SDK\Classes\SchemaSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX.hpp">
+      <Filter>Core\Utilities\DirectX</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

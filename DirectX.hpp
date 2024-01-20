@@ -1,5 +1,7 @@
 #pragma once
 
+#pragma warning(disable: 4312)
+
 #include <dxgi.h>
 #include <d3d11.h>
 #include <Windows.h>
